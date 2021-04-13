@@ -13,11 +13,14 @@ public class AdminService {
 
     // GETSERVICE
     // authentication
-    public boolean auth(int adminId,String username, String password) {
-        Admin admin = repository.findById(adminId).orElse(null);
+    public boolean auth(Admin obj) {
+        Admin admin = repository.findById(obj.getId()).orElse(null);
+        if(admin == null){
+            return false;
+        }
         String adminUsername = admin.getUsername();
-        String adminPassword = admin.getPassword();
-        if( (adminUsername.compareTo(username) == 0 ) && ( adminPassword.compareTo(password) == 0 )) {
+        String adminPassword = admin.getPass    ();
+        if( (adminUsername.compareTo(obj.getUsername()) == 0 ) && ( adminPassword.compareTo(obj.getPass()) == 0 )) {
             return true;
         }
         return false;
@@ -33,5 +36,9 @@ public class AdminService {
         Admin existingDetail = repository.findById(newDetail.getId()).orElse(null);
         existingDetail = newDetail;
         return repository.save(existingDetail);
+    }
+
+    public Admin getById(int id){
+        return repository.findById(id).orElse(null);
     }
 }

@@ -22,8 +22,8 @@ public class Employee {
     private String name;
     private String gender;
     private String address;
-    private Date dob;
-    private Date doj;
+    private String dob;
+    private String doj;
     private String username;
     private String password;
     private int companyId;

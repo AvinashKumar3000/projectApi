@@ -19,12 +19,12 @@ public class Admin {
     @Id
     @GeneratedValue
     private int id;
-    private String name;
+    private String yourname;
     private String username;
-    private String password;
+    private String pass;
     private String websiteLink;
     private String location;
-    private Date startDate;
+    private String startDate;
     private String ceo;
     private String profileLink;
     private String groupId;
