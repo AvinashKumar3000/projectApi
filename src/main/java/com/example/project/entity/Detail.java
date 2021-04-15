@@ -14,35 +14,40 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Details")
+@Table(name = "poc_details")
 public class Detail {
     @Id
     @GeneratedValue
     private int id;
     private String title;
-    private String description;
-    private String industry;
+    private String problemDetails;
+    private String domain;
     private String lob;
     private String personas;
     private String kpi;
+    private String tcsSolution;
+    private String features;
+    private String benefits;
+    private String tag;
     private Date startDate;
     private Date endDate;
     private String productType;
     private String status;
-    private String techStack;
-    private String codeRef;
+    private String technology;
+    private String codeReference;
     private String demoVideo;
     private String pov;
-    private String businessPotentialCustomer;
+    private String architectureDiagram;
+    private String topProspectiveCustomers;
     private String innovationCategory;
-    private String gAndTStory;
-    private String crmId;
+    private String g_and_t_story;
+    private String crm_ID;
     private String customerAccount;
     private String productOwners;
     private String contextualMaster;
     private String innovistaChampion;
     private String crowdSourcingChampion;
-    private String brm;
-    private String associates;
-    private String attachments;
+    private String brm_CP;
+    private String associatesContributingToPOCs;
 }
+
