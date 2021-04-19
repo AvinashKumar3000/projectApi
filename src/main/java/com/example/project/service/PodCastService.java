@@ -17,4 +17,10 @@ public class PodCastService {
     public PodCast setPodCast(PodCast podCast) {
         return repository.save(podCast);
     }
+
+    public PodCast updatePodCast(PodCast podCast) {
+        PodCast old = repository.findById(podCast.getId()).orElse(null);
+        old = podCast;
+        return repository.save(old);
+    }
 }

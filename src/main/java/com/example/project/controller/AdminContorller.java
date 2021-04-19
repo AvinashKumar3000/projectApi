@@ -16,7 +16,10 @@ public class AdminContorller {
     @PostMapping("/admin")
     public Admin create(@RequestBody Admin admin){
         return service.saveDetails(admin);
-
+    }
+    @PutMapping("/admin")
+    public Admin update(@RequestBody Admin admin){
+        return service.updateDetail(admin);
     }
     @GetMapping("/admin/{id}")
     public Admin getAdminById(@RequestBody int id){

@@ -18,4 +18,8 @@ public class PodCastController {
     public PodCast set(@RequestBody PodCast podCast){
         return service.setPodCast(podCast);
     }
+    @PutMapping("/podcast")
+    public PodCast update(@RequestBody PodCast podCast){
+        return service.updatePodCast(podCast);
+    }
 }

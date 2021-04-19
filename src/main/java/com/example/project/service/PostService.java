@@ -17,4 +17,10 @@ public class PostService {
     public Post setPost(Post post) {
         return repository.save(post);
     }
+
+    public Post updatePost(Post post) {
+        Post old = repository.findById(post.getId()).orElse(null);
+        old = post;
+        return repository.save(old);
+    }
 }

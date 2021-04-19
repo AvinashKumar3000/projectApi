@@ -18,4 +18,6 @@ public class PostController {
     public Post set(@RequestBody Post post){
         return service.setPost(post);
     }
+    @PutMapping("post")
+    public Post update(@RequestBody Post post){ return service.updatePost(post);}
 }
