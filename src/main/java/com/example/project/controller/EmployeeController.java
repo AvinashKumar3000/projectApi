@@ -13,7 +13,6 @@ import java.util.List;
 public class EmployeeController {
     @Autowired
     private EmployeeService service;
-
     // GET
     @GetMapping("/getAllEmployees")
     public List<Employee> getAllEmployees(){

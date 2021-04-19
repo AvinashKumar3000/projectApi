@@ -9,17 +9,19 @@ import java.util.List;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("admin")
 public class AdminContorller {
     @Autowired
     private AdminService service;
 
-    @PostMapping("createAdmin")
-    public String create(@RequestBody Admin admin){
-        service.saveDetails(admin);
-        return "sucess";
-    }
+    @PostMapping("/admin")
+    public Admin create(@RequestBody Admin admin){
+        return service.saveDetails(admin);
 
+    }
+    @GetMapping("/admin/{id}")
+    public Admin getAdminById(@RequestBody int id){
+        return service.getById(id);
+    }
     @PostMapping("authentication")
     public String authentication(@RequestBody Admin admin){
         if(service.auth(admin)){
