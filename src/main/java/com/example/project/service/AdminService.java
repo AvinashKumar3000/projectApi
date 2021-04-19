@@ -6,6 +6,8 @@ import com.example.project.repository.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AdminService {
     @Autowired
@@ -40,5 +42,9 @@ public class AdminService {
 
     public Admin getById(int id){
         return repository.findById(id).orElse(null);
+    }
+
+    public List<Admin> getAll() {
+        return repository.findAll();
     }
 }

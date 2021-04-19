@@ -3,6 +3,7 @@ package com.example.project.controller;
 import com.example.project.entity.Admin;
 import com.example.project.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public class AdminContorller {
         return service.updateDetail(admin);
     }
     @GetMapping("/admin/{id}")
-    public Admin getAdminById(@RequestBody int id){
+    public Admin getAdminById(@PathVariable int id){
         return service.getById(id);
     }
     @PostMapping("authentication")
