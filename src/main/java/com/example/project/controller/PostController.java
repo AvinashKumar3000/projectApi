@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.*;
 public class PostController {
     @Autowired
     private PostService service;
-    @GetMapping("podcast")
+    @GetMapping("post")
     public Post get(){
         return service.getPost();
     }
-    @PostMapping("podcast")
+    @PostMapping("post")
     public Post set(@RequestBody Post post){
         return service.setPost(post);
     }

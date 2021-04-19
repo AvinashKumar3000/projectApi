@@ -20,6 +20,6 @@ public class Post {
     private int id;
     private String auther;
     private String shortDesc;
-    private String desc;
+    private String description;
     private String time;
 }
