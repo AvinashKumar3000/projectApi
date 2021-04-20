@@ -18,6 +18,10 @@ public class EmployeeController {
     public List<Employee> getAllEmployees(){
         return service.getAll();
     }
+    @GetMapping("/getAllEmployeesByCID/{cid}")
+    public List<Employee> getAllEmployeesByCID(@PathVariable int cid) {
+        return service.getAllByCID(cid);
+    }
     // POST
     @PostMapping("/addEmployee")
     public String addEmployee(@RequestBody Employee employee){

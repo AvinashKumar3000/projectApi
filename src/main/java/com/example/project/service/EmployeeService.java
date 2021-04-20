@@ -42,4 +42,8 @@ public class EmployeeService {
         repository.deleteById(id);
         return "deleted";
     }
+
+    public List<Employee> getAllByCID(int cid) {
+        return repository.findAllByCompanyId(cid);
+    }
 }
