@@ -33,4 +33,8 @@ public class AdminContorller {
         }
         return "false";
     }
+    @DeleteMapping("/admin/{id}")
+    public String deleteAdmin(@PathVariable int id) {
+        return service.deleteAdmin(id);
+    }
 }

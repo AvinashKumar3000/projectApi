@@ -47,4 +47,9 @@ public class AdminService {
     public List<Admin> getAll() {
         return repository.findAll();
     }
+
+    public String deleteAdmin(int id) {
+        repository.deleteById(id);
+        return "deleted";
+    }
 }
