@@ -38,4 +38,8 @@ public class EmployeeService {
         }
         return false;
     }
+    public String deleteEmployee(int id){
+        repository.deleteById(id);
+        return "deleted";
+    }
 }
