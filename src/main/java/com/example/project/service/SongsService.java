@@ -19,5 +19,9 @@ public class SongsService {
     public List<Songs> getAllSongs(){
         return repository.findAll();
     }
+
+    public Songs getSong(int id) {
+        return repository.findById(id).orElse(null);
+    }
 }
 
