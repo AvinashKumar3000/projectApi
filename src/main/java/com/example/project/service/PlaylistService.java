@@ -13,7 +13,7 @@ public class PlaylistService {
     private PlaylistRepository repository;
 
     public List<Playlist> playlistByEmpId(int empId) {
-        return repository.byEmployeeQuery(empId);
+        return repository.findAllByEmployeeId(empId);
     }
 
     public String addPlaylist(Playlist playlist) {

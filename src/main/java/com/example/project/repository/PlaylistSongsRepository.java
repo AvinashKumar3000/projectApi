@@ -8,7 +8,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface PlaylistSongsRepository extends JpaRepository<PlaylistSongs, Integer> {
-    @Query(name = "SELECT * FROM playlistsongs where playlist_id = plId",
-    nativeQuery = true)
-    List<PlaylistSongs> queryPlayListId(@Param("plId") int plId);
+
+    List<PlaylistSongs> findAllByPlaylistId(int plId);
 }

@@ -13,7 +13,7 @@ public class PlaylistSongsService {
     private PlaylistSongsRepository repository;
 
     public List<PlaylistSongs> byPlaylistId(int plId) {
-        return repository.queryPlayListId(plId);
+        return repository.findAllByPlaylistId(plId);
     }
     public PlaylistSongs addSong(PlaylistSongs playlistSongs) {
         return repository.save(playlistSongs);
