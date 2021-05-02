@@ -12,7 +12,7 @@ import java.util.List;
 public class PlaylistSongsController {
     @Autowired
     private PlaylistSongsService service;
-    @GetMapping("playlistsongs/{plid}")
+    @GetMapping("playlistsongs/{plId}")
     public List<PlaylistSongs> playlistSongs(@PathVariable int plId) {
         return service.byPlaylistId(plId);
     }
