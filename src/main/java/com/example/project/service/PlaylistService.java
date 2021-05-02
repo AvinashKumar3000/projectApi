@@ -20,4 +20,8 @@ public class PlaylistService {
         repository.save(playlist);
         return "created";
     }
+
+    public void delPlaylist(int id) {
+        repository.deleteById(id);
+    }
 }

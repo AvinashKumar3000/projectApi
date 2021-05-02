@@ -16,7 +16,9 @@ public class EmployeeService {
     public List<Employee> getAll(){
         return repository.findAll();
     }
-
+    public Employee getByid(int id) {
+        return repository.findById(id).orElse(null);
+    }
     public Employee add(Employee employee){
         return repository.save(employee);
     }

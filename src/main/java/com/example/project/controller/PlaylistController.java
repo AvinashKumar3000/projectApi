@@ -20,4 +20,9 @@ public class PlaylistController {
     public String addPlaylist(@RequestBody Playlist playlist){
         return service.addPlaylist(playlist);
     }
+    @DeleteMapping("playlist")
+    public String delPlaylist(@PathVariable int id) {
+        service.delPlaylist(id);
+        return "deleted successfully";
+    }
 }

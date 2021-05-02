@@ -14,6 +14,10 @@ public class EmployeeController {
     @Autowired
     private EmployeeService service;
     // GET
+    @GetMapping("/getById/{id}")
+    public Employee getById(@PathVariable int id){
+        return service.getByid(id);
+    }
     @GetMapping("/getAllEmployees")
     public List<Employee> getAllEmployees(){
         return service.getAll();
