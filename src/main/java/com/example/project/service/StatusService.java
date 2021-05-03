@@ -12,7 +12,7 @@ public class StatusService {
     @Autowired
     private StatusRepository repository;
 
-    public List<Status> getAll(int cid) {
+    public List<Status> getAll() {
         return repository.findAll();
     }
 

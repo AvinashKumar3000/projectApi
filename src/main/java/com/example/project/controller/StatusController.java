@@ -12,9 +12,9 @@ import java.util.List;
 public class StatusController {
     @Autowired
     private StatusService service;
-    @GetMapping("status/{cid}")
-    public List<Status> listStatusBycId(@PathVariable int cid){
-        return service.getAll(cid);
+    @GetMapping("status")
+    public List<Status> listStatusBycId(){
+        return service.getAll();
     }
     @PutMapping("status")
     public Status update(@RequestBody Status status){
