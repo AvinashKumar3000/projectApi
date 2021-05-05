@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import org.springframework.web.multipart.MultipartFile;
+import javax.persistence.Transient;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -49,5 +51,7 @@ public class Detail {
     private String crowdSourcingChampion;
     private String brm_CP;
     private String associatesContributingToPOCs;
+    @Transient
+    private MultipartFile screenShot;
 }
 
