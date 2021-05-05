@@ -20,8 +20,8 @@ public class StatusService {
        List<Status> arr = repository.findByEmpId(status.getEmpId());
         if(arr.size() != 0) {
             Status oldStatus = arr.get(0);
-            oldStatus = status;
-            return repository.save(oldStatus);
+            status.setId(oldStatus.getId());
+            return repository.save(status);
         }else{
             return repository.save(status);
         }
