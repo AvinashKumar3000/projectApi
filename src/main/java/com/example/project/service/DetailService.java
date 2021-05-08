@@ -2,7 +2,6 @@ package com.example.project.service;
 
 import com.example.project.entity.Detail;
 import com.example.project.repository.DetailRepository;
-import l
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
