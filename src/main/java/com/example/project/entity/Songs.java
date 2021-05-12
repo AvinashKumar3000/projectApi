@@ -24,4 +24,5 @@ public class Songs {
     private String artists;
     private String releases;
     private String genere;
+    private String spotifyUrl;
 }
